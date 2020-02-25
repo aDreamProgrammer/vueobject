@@ -1,7 +1,11 @@
 <template>
-  <div >
+  <div id="dv">
     <mt-header fixed title="vue 项目" class="head"></mt-header>
-    <router-view></router-view>
+
+    <transition mode="out-in">
+        <router-view></router-view>
+    </transition>
+
     <nav class="mui-bar mui-bar-tab">
       <router-link class="mui-tab-item " to="/home">
         <span class="mui-icon mui-icon-home"></span>
@@ -30,8 +34,21 @@ export default {};
 </script>
 
 <style>
+.v-enter,
+.v-leave-t0 {
+  transform: translateX(100%);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 1s;
+}
+
 body {
   background-color: #fff;
+}
+#dv {
+  padding-top: 40px;
 }
 .mint-swipe-items-wrap {
   height: 200px;

@@ -7,10 +7,11 @@ import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
 import './assets/mui/css/mui.css'
 import './assets/mui/css/icons-extra.css'
+import VueResource from 'vue-resource';
 
 Vue.use(Mint)
 Vue.config.productionTip = false
-
+Vue.use(VueResource)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

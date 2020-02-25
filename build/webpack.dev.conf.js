@@ -13,6 +13,19 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+var data=require('../data.json')
+var lubotu=data.lubotu;
+var express=require('express');
+var app=express();
+app.get('/lubotu',function(req,res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send(lubotu)
+})
+app.listen('3002',function() {
+  console.log('server is running')
+})
+
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
