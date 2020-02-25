@@ -1,6 +1,6 @@
 <template>
   <div class="center">
-    <mt-swipe :auto="4000">
+    <mt-swipe :auto="3000">
       <mt-swipe-item v-for="item in lubo" :key="item.id">
         <img :src="item.photo" alt />
       </mt-swipe-item>
