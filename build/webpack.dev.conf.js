@@ -15,11 +15,21 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 
 var data=require('../data.json')
 var lubotu=data.lubotu;
+var newslist=data.news;
+var everynews=data.everynews;
 var express=require('express');
 var app=express();
 app.get('/lubotu',function(req,res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.send(lubotu)
+})
+app.get('/newslist',function(req,res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send(newslist)
+})
+app.get('/everynews/:id',function(req,res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send(everynews)
 })
 app.listen('3002',function() {
   console.log('server is running')

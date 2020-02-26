@@ -58,6 +58,7 @@ body {
 #dv {
   padding-top: 40px;
   overflow-x: hidden;
+  padding-bottom: 50px;
 }
 .mint-swipe-items-wrap {
   height: 200px;
