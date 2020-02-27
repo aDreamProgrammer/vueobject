@@ -17,6 +17,9 @@ var data=require('../data.json')
 var lubotu=data.lubotu;
 var newslist=data.news;
 var everynews=data.everynews;
+var datas=data.datas;
+var img=data.img;
+var messages=data.message;
 var express=require('express');
 var app=express();
 app.get('/lubotu',function(req,res) {
@@ -30,6 +33,18 @@ app.get('/newslist',function(req,res) {
 app.get('/everynews/:id',function(req,res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.send(everynews)
+})
+app.get('/datas',function(req,res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send(datas)
+})
+app.get('/img',function(req,res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send(img)
+})
+app.get('/message/:id',function(req,res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send(messages)
 })
 app.listen('3002',function() {
   console.log('server is running')

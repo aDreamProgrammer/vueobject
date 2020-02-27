@@ -21,6 +21,9 @@ Vue.filter('dataFormat', function (datastr) {
 Vue.use(Mint)
 Vue.config.productionTip = false
 Vue.use(VueResource)
+
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
